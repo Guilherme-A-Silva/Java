@@ -11,10 +11,9 @@ public class Gerente extends Funcionario{
     Vendedores = vendedores;
     SalarioFixo = salarioFixo;
     PercentualDeComissao = percentualDeComissao;
-    setSalario(CalculaSalario());
   }
-
-  private double CalculaSalario(){
+  @Override
+  public double getSalario(){
     double totalDeVendasDosVendedores = 0.0;
 
     /* for(int i =0; i<Vendedores.length; i++){

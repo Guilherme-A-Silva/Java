@@ -1,14 +1,12 @@
 package FolhaDePagamento;
 
 public class Funcionario {
-  String Nome, Email, telefone;
-  double Salario;
-
+  private String Nome, Email, telefone;
+  public static final double SalarioMinimo = 1400.00;
   public Funcionario(String nome, String email, String telefone) {
     Nome = nome;
     Email = email;
     this.telefone = telefone;
-    Salario = 0.0;
   }
   public String getNome() {
     return Nome;
@@ -28,14 +26,11 @@ public class Funcionario {
   public void setTelefone(String telefone) {
     this.telefone = telefone;
   }
-  public double getSalario() {
-    return Salario;
-  }
-  public void setSalario(double salario) {
-    Salario = salario;
+  public double getSalario(){
+    return SalarioMinimo;
   }
   @Override
   public String toString() {
-    return "Funcionario [Nome=" + Nome + ", Email=" + Email + ", telefone=" + telefone + ", Salario=" + Salario + "]";
+    return "Funcionario [Nome=" + Nome + ", Email=" + Email + ", telefone=" + telefone+ "]";
   }
 }
